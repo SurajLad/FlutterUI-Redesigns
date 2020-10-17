@@ -1,16 +1,30 @@
-# whatsapp_redesign_flutter
+# WhatsApp Redesign UI
 
 A new Flutter project.
 
-## Getting Started
+Original Design        |  Flutter Version
+:-------------------------:|:-------------------------:
+<img src="screenshots/design.png" width="700" height="500">  |   <img src="screenshots/flutter.png" width="700" height="500"> 
 
-This project is a starting point for a Flutter application.
+## How to use
 
-A few resources to get you started if this is your first Flutter project:
+To clone and run this application, you'll need [Git](https://git-scm.com/downloads) and [Flutter](https://flutter.dev/docs/get-started/install) installed on your computer. From your command line:
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+```
+# Clone this repository
+$ git clone https://github.com/SurajLad/FlutterUI-Redesigns.git
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+# Go into the repository
+$ cd WhatsApp_Redesign
+
+# Install dependencies
+$ flutter packages get
+
+# Run the app
+$ flutter run
+```
+## Credits
+  - <a target="_blank" href="https://dribbble.com/shots/14231642-Whatsapp-Redesign">UI Design By Siddhesh Kanse</a>
+  - <a target="_blank" href="https://www.flaticon.com">Graphics By FlatIcons</a>
+
+If you like my work,then do support me by ⭐️ this repo if you like it.
