@@ -1,6 +1,7 @@
 # WhatsApp Redesign UI
 
-A new Flutter project.
+This Whatsapp UI redesign made in flutter :) 
+
 
 Original Design        |  Flutter Version
 :-------------------------:|:-------------------------:
