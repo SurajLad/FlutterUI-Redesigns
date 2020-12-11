@@ -1,5 +1,7 @@
 import 'package:amazon_redesign/helpers/constants.dart';
 import 'package:amazon_redesign/widgets/custom_buttons.dart';
+import 'package:amazon_redesign/widgets/popular_product.dart';
+import 'package:carousel_pro/carousel_pro.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -16,16 +18,17 @@ class _HomePageState extends State<HomePage> {
     return SafeArea(
       child: Scaffold(
         backgroundColor: Colors.white,
-        body: Column(
+        body: ListView(
           children: [
             Container(
               width: Get.width,
-              height: 300,
+              height: 270,
               decoration: BoxDecoration(
                 color: appThemeColor,
                 borderRadius: BorderRadius.only(
-                    bottomLeft: Radius.circular(30),
-                    bottomRight: Radius.circular(30)),
+                  bottomLeft: Radius.circular(24),
+                  bottomRight: Radius.circular(24),
+                ),
               ),
               child: Column(
                 children: [
@@ -35,6 +38,55 @@ class _HomePageState extends State<HomePage> {
                 ],
               ),
             ),
+            const SizedBox(height: 15),
+            Container(
+              margin: const EdgeInsets.only(left: 20, right: 20),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    "Popular Products",
+                    style: medBoldStyle,
+                  ),
+                  Text(
+                    "View All",
+                    style: smallBoldTxtStyle.copyWith(color: Colors.black54),
+                  ),
+                ],
+              ),
+            ),
+            const SizedBox(height: 15),
+            Container(
+              height: 140,
+              child: ListView.builder(
+                shrinkWrap: true,
+                scrollDirection: Axis.horizontal,
+                itemCount: popularProductList.length,
+                itemBuilder: (BuildContext context, int index) {
+                  return Product(
+                    product: popularProductList[index],
+                  );
+                },
+              ),
+            ),
+            const SizedBox(height: 15),
+            Container(
+              margin: const EdgeInsets.only(left: 15, right: 15),
+              height: 150.0,
+              child: Carousel(
+                dotIncreaseSize: 0.8,
+                dotSize: 8,
+                dotColor: appRecentColor,
+                dotBgColor: Colors.transparent,
+                borderRadius: true,
+                boxFit: BoxFit.cover,
+                images: List.generate(
+                  slideShowList.length,
+                  (index) => NetworkImage(slideShowList[index]),
+                ),
+              ),
+            ),
+            const SizedBox(height: 25),
           ],
         ),
       ),
@@ -51,13 +103,17 @@ class _HomePageState extends State<HomePage> {
             "Best Collections",
             style: medBoldStyle.copyWith(color: Colors.white),
           ),
+          const SizedBox(height: 15),
           Container(
-            height: 150,
+            height: 90,
             child: ListView.builder(
+              shrinkWrap: true,
+              scrollDirection: Axis.horizontal,
               itemCount: collectionList.length,
               itemBuilder: (BuildContext context, int index) {
                 return CustomButton(
-                  icon: collectionList[index],
+                  icon: collectionList[index].imgUrl,
+                  name: collectionList[index].name,
                 );
               },
             ),
@@ -111,7 +167,7 @@ class _HomePageState extends State<HomePage> {
 
   buildAppBar() {
     return Container(
-      margin: const EdgeInsets.only(left: 20, right: 20, top: 0),
+      margin: const EdgeInsets.only(left: 20, right: 20, top: 10),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [

@@ -3,16 +3,16 @@ import 'package:google_fonts/google_fonts.dart';
 
 TextStyle regularTxtStyle = GoogleFonts.poppins(
   fontSize: 14,
-  color: Colors.black54,
+  color: Colors.black,
 );
 TextStyle regularBoldTxtStyle = GoogleFonts.poppins(
-    fontSize: 14, color: Colors.black54, fontWeight: FontWeight.bold);
+    fontSize: 14, color: Colors.black, fontWeight: FontWeight.bold);
 
 TextStyle medBoldStyle = GoogleFonts.poppins(
-    fontSize: 18, color: Colors.black54, fontWeight: FontWeight.w600);
+    fontSize: 18, color: Colors.black, fontWeight: FontWeight.w600);
 
 TextStyle smallBoldTxtStyle = GoogleFonts.poppins(
-    fontSize: 13, color: Colors.black54, fontWeight: FontWeight.bold);
+    fontSize: 12, color: Colors.black, fontWeight: FontWeight.bold);
 
-TextStyle smallTxtStyle = GoogleFonts.poppins(
-    fontSize: 14, color: Colors.black54, fontWeight: FontWeight.w400);
+TextStyle smallTxtStyle =
+    GoogleFonts.poppins(fontSize: 12, color: Colors.black54);
