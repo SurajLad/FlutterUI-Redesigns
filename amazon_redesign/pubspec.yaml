@@ -29,6 +29,7 @@ dependencies:
   google_fonts: ^1.1.1
   get:
   carousel_pro: ^1.0.0
+  salomon_bottom_bar: ^2.0.0
 
 dev_dependencies:
   flutter_test:

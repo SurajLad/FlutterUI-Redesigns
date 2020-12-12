@@ -4,6 +4,7 @@ import 'package:amazon_redesign/widgets/popular_product.dart';
 import 'package:carousel_pro/carousel_pro.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:salomon_bottom_bar/salomon_bottom_bar.dart';
 
 import 'helpers/text_styles.dart';
 
@@ -13,10 +14,61 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  int selectedIndex = 0;
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
+        bottomNavigationBar: Container(
+          decoration: BoxDecoration(
+            color: appThemeColor,
+            borderRadius: BorderRadius.only(
+              topLeft: Radius.circular(26),
+              topRight: Radius.circular(26),
+            ),
+          ),
+          child: SalomonBottomBar(
+            unselectedItemColor: appRecentColor,
+            itemPadding: const EdgeInsets.all(12),
+            margin:
+                const EdgeInsets.only(left: 20, right: 20, top: 7, bottom: 7),
+            currentIndex: selectedIndex,
+            onTap: (int x) {
+              setState(() {
+                selectedIndex = x;
+              });
+            },
+            items: [
+              /// Home
+              SalomonBottomBarItem(
+                icon: Icon(Icons.home),
+                title: Text("Home"),
+                selectedColor: Colors.white,
+              ),
+
+              /// Likes
+              SalomonBottomBarItem(
+                icon: Icon(Icons.favorite),
+                title: Text("Likes"),
+                selectedColor: Colors.white,
+              ),
+
+              /// Search
+              SalomonBottomBarItem(
+                icon: Icon(Icons.notifications),
+                title: Text("Search"),
+                selectedColor: Colors.white,
+              ),
+
+              /// Profile
+              SalomonBottomBarItem(
+                icon: Icon(Icons.shopping_cart),
+                title: Text("Profile"),
+                selectedColor: Colors.white,
+              ),
+            ],
+          ),
+        ),
         backgroundColor: Colors.white,
         body: ListView(
           children: [

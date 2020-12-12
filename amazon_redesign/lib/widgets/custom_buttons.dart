@@ -1,4 +1,3 @@
-import 'package:amazon_redesign/helpers/constants.dart';
 import 'package:amazon_redesign/helpers/text_styles.dart';
 import 'package:flutter/material.dart';
 
