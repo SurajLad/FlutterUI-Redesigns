@@ -1,16 +1,31 @@
-# amazon_redesign
+# Amazon App Redesign UI
 
-A new Flutter project.
+This Amazon App UI redesign made in flutter :) 
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
+## Screenshots :
+<img src="Screenshots/3.png" >
 
-A few resources to get you started if this is your first Flutter project:
+## How to use
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+To clone and run this application, you'll need [Git](https://git-scm.com/downloads) and [Flutter](https://flutter.dev/docs/get-started/install) installed on your computer. From your command line:
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+```
+# Clone this repository
+$ git clone https://github.com/SurajLad/FlutterUI-Redesigns.git
+
+# Go into the repository
+$ cd WhatsApp_Redesign
+
+# Install dependencies
+$ flutter packages get
+
+# Run the app
+$ flutter run
+```
+## Credits
+  - <a target="_blank" href="https://dribbble.com/shots/14321616/attachments/5981634?mode=media">UI Design By Abhishek Prakash</a>
+  - <a target="_blank" href="https://www.flaticon.com">Graphics By FlatIcons</a>
+  - <a target="_blank" href="#">Amazon</a>
+
+If you like my work,then do support me by ⭐️ this repo if you like it.
