@@ -30,6 +30,7 @@ dependencies:
   get:
   carousel_pro: ^1.0.0
   salomon_bottom_bar: ^2.0.0
+  animated_drawer: ^0.0.4
 
 dev_dependencies:
   flutter_test:
